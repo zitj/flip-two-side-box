@@ -1,0 +1,41 @@
+body {
+    background: rgb(204, 204, 204);
+    text-align: center;
+}
+.container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+.box {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    &.active {
+        .front {
+            transform: rotateY(0deg) translateX(0px);
+        }
+        .back {
+            transform: rotateY(90deg) skewY(5deg) translateY(-12px)
+                translateX(-30px);
+        }
+    }
+
+    .square {
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        transition: 0.2s ease-in-out;
+        transform-style: preserve-3d;
+    }
+    .front {
+        background: green;
+        transform: rotateY(90deg) skewY(-5deg) translateX(200px);
+        transform-origin: right;
+    }
+    .back {
+        background: hotpink;
+        transform-origin: left;
+    }
+}

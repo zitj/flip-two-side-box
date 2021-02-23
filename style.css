@@ -1,0 +1,53 @@
+body {
+  background: #cccccc;
+  text-align: center;
+}
+
+.container {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.box {
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+
+.box.active .front {
+  -webkit-transform: rotateY(0deg) translateX(0px);
+          transform: rotateY(0deg) translateX(0px);
+}
+
+.box.active .back {
+  -webkit-transform: rotateY(90deg) skewY(5deg) translateY(-12px) translateX(-30px);
+          transform: rotateY(90deg) skewY(5deg) translateY(-12px) translateX(-30px);
+}
+
+.box .square {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.box .front {
+  background: green;
+  -webkit-transform: rotateY(90deg) skewY(-5deg) translateX(200px);
+          transform: rotateY(90deg) skewY(-5deg) translateX(200px);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.box .back {
+  background: hotpink;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+/*# sourceMappingURL=style.css.map */
